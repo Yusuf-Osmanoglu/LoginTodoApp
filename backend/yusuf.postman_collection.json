@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "0b4e8492-accd-41e9-9bf8-b6a6be5b0bb4",
+		"name": "yusuf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31449029"
+	},
+	"item": [
+		{
+			"name": "news",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyc3ROYW1lIjoiTWljaGFlbCIsImxhc3ROYW1lIjoiV2lsbGlhbXMiLCJtYWlkZW5OYW1lIjoiIiwiYWdlIjozNSwiZ2VuZGVyIjoibWFsZSIsInVzZXJuYW1lIjoidXNlcjIiLCJpYXQiOjE3MTgzNjg1MTEsImV4cCI6MTcxODQ1NDkxMX0.mCWGjYGPstnXoQu_pWRVub1BCkvoeVxzUu3cAzCHzvA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/news",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user2\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
